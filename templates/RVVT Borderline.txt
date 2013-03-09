@@ -1,0 +1,22 @@
+﻿<identifier> RVVT
+
+Result:  
+
+Negative (no lupus anticoagulant detected); see comment.
+
+Comment:
+
+Although the borderline results of this RVVT test could be considered positive for lupus anticoagulant according to the manufacturer’s guidelines for the interpretation of test results, the RVVT test does not meet criteria for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40) and the results do not definitively demonstrate an inhibitor.  Overall, the best interpretation of these findings is as NEGATIVE for lupus anticoagulant.  
+
+A negative test result in this assay does not exclude the possibility of a lupus anticoagulant.  Current guidelines suggest testing for lupus anticoagulant with two clot based tests (J Thromb Haemost 2009; 7: 1737-40) and it is noted that the concurrent lupus anticoagulant by HEXA assay is <hexa_result> in this patient.  Lupus anticoagulant testing should be considered positive if one of the two tests gives a positive result. <both_neg>
+
+Testing for lupus anticoagulant in the presence of anticoagulant therapy (including warfarin, direct thrombin inhibitors & direct factor 10a inhibitors, and supratherapeutic heparin) is not recommended due to possible interference with test results.  The presence of factor deficiencies or a factor specific inhibitor may also interfere with this assay.  Clinical correlation is advised.  
+
+Test] results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295–306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
+
+
+
+
+Scott Kogan, MD
+82493
+
