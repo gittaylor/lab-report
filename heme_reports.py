@@ -22,7 +22,7 @@ The Lupus Anticoagulant by HEXA test is POSITIVE for lupus anticoagulant accordi
 
 Current guidelines suggest testing for lupus anticoagulant with two clot based tests (J Thromb Haemost 2009; 7: 1737-40) and it is noted that the concurrent RVVT assay is %s in this patient.  Lupus anticoagulant testing should be considered positive if one of the two tests gives a positive result.
 
-Testing for lupus anticoagulant in the presence of anticoagulant therapy (including warfarin, direct thrombin inhibitors & direct factor 10a inhibitors, and supratherapeutic heparin) is not recommended due to possible interference with test results.  Clinical correlation is advised as anticoagulation therapy may result in a false positive result; [in this sample a false positive is unlikely given the strength of the positive result.]  The presence of factor deficiencies or a factor specific inhibitor may also interfere with this assay.
+Testing for lupus anticoagulant in the presence of anticoagulant therapy (including warfarin, direct thrombin inhibitors & direct factor 10a inhibitors, and supratherapeutic heparin) is not recommended due to possible interference with test results.  Clinical correlation is advised as anticoagulation therapy may result in a false positive result;  The presence of factor deficiencies or a factor specific inhibitor may also interfere with this assay.
 
 Positive test results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295–306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
 
@@ -39,7 +39,7 @@ Equivocal; see comment.
 Clinical Interpretation by Pathologist:
 The Lupus Anticoagulant by HEXA test is at the border between a negative and a positive result.  The results are therefore EQUIVOCAL.  If clinically indicated and at an appropriate time, the Lupus Anticoagulant by HEXA test could by repeated.
 
-Current guidelines suggest testing for lupus anticoagulant with two clot based tests (J Thromb Haemost 2009; 7: 1737-40) and it is noted that the concurrent RVVT assay is %s in this patient.  Lupus anticoagulant testing should be considered positive if one of the two tests gives a positive result. [Given the negative results in both the Lupus Anticoagulant by HEXA and RVVT assays, the findings are negative for Lupus Anticoagulant.]
+Current guidelines suggest testing for lupus anticoagulant with two clot based tests (J Thromb Haemost 2009; 7: 1737-40) and it is noted that the concurrent RVVT assay is %s in this patient.  Lupus anticoagulant testing should be considered positive if one of the two tests gives a positive result.
 
 Testing for lupus anticoagulant in the presence of anticoagulant therapy (including warfarin, direct thrombin inhibitors & direct factor 10a inhibitors, and supratherapeutic heparin) is not recommended due to possible interference with test results.  The presence of factor deficiencies or a factor specific inhibitor may also interfere with this assay.  Clinical correlation is advised.
 
