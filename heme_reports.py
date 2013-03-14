@@ -2,15 +2,6 @@
 import heme_tests as ht
 from os import path
 
-def rvvt_test_results():
-    return {"W13590": {"result": "NEG"}, 
-            "F55075": {"result": "POS"}, 
-            "H3231": {"result": "NEG"}, 
-            "M58876": {"result": "NEG"}, 
-            "T65658": {"result": "NEG"}, 
-            "T61615": {"result": "POS"}, 
-            "H6779": {"result": "POS"}}
-
 def read_hexa_rvvt_worksheet(filename):
     f = open(filename)
     txt = f.read()
