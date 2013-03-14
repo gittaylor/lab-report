@@ -1,4 +1,4 @@
-Contains the code and macros required to run the scripts (in Misys) to generate reports
+Contains the code and macros required to run scripts (in Misys) to generate reports
 
 The two reports that are available:
 transfusion.py - create reports from transfusion history
