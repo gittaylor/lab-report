@@ -1,17 +1,17 @@
-﻿<identifier> RVVT
+<identifier> RVVT
 
 Result:  
 Positive (lupus anticoagulant detected); see comment.
 
 Comment:
 
-The RVVT test is POSITIVE for lupus anticoagulant according to the manufacturer’s and international guidelines for interpretation.  
+The RVVT test is POSITIVE for lupus anticoagulant according to the manufacturer's and international guidelines for interpretation.  
 
 Current guidelines suggest testing for lupus anticoagulant with two clot based tests (J Thromb Haemost 2009; 7: 1737-40) and it is noted that the concurrent lupus anticoagulant by HEXA assay is <hexa_result> in this patient.  Lupus anticoagulant testing should be considered positive if one of the two tests gives a positive result. 
 
 Testing for lupus anticoagulant in the presence of anticoagulant therapy (including warfarin, direct thrombin inhibitors & direct factor 10a inhibitors, and supratherapeutic heparin) is not recommended due to possible interference with test results.  Clinical correlation is advised as anticoagulation therapy may result in a false positive result<strong_positive>.  The presence of factor deficiencies or a factor specific inhibitor may also interfere with this assay.
 
- Positive test results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295–306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
+Positive test results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295-306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
 
 
 Scott Kogan, MD

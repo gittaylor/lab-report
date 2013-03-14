@@ -1,4 +1,4 @@
-﻿<identifier> RVVT 
+<identifier> RVVT 
 
 Result:  
 Equivocal; see comment.
@@ -11,7 +11,7 @@ Current guidelines suggest testing for lupus anticoagulant with two clot based t
 
 Testing for lupus anticoagulant in the presence of anticoagulant therapy (including warfarin, direct thrombin inhibitors & direct factor 10a inhibitors, and supratherapeutic heparin) is not recommended due to possible interference with test results.  The presence of factor deficiencies or a factor specific inhibitor may also interfere with this assay.  Clinical correlation is advised.  
 
-Test results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295–306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
+Test results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295-306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
 
 
 

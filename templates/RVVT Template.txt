@@ -1,4 +1,4 @@
-﻿RVVT Texts
+RVVT Texts
 
 Result:  
 Positive (lupus anticoagulant detected); see comment.
@@ -8,19 +8,19 @@ Equivocal; see comment.
 Clinical Interpretation by Pathologist:
 
 FIRST PARAGRAPH
-The RVVT test is POSITIVE for lupus anticoagulant according to the manufacturer’s and international guidelines for interpretation.  
+The RVVT test is POSITIVE for lupus anticoagulant according to the manufacturer's and international guidelines for interpretation.  
 
-The RVVT test is NEGATIVE for lupus anticoagulant according to the manufacturer’s and international guidelines for interpretation.  
+The RVVT test is NEGATIVE for lupus anticoagulant according to the manufacturer's and international guidelines for interpretation.  
 
 THREE EQUIVOCALS:
-The RVVT test is positive for lupus anticoagulant according to the manufacturer’s guidelines for the interpretation of test results.   However, the RVVT test does not meet criteria for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40).  The result is therefore EQUIVOCAL.
+The RVVT test is positive for lupus anticoagulant according to the manufacturer's guidelines for the interpretation of test results.   However, the RVVT test does not meet criteria for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40).  The result is therefore EQUIVOCAL.
 
-The RVVT test is negative for lupus anticoagulant according to the manufacturer’s guidelines for the interpretation of test results.   However, the results appear to be meet criteria for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40).   The results are therefore EQUIVOCAL. 
+The RVVT test is negative for lupus anticoagulant according to the manufacturer's guidelines for the interpretation of test results.   However, the results appear to be meet criteria for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40).   The results are therefore EQUIVOCAL. 
 
-Although the RVVT test is positive for lupus anticoagulant according to the manufacturer’s guidelines for interpretation, review of the clinical history indicates [current warfarin therapy/a prolonged prothrombin time] and the results do not definitively demonstrate an inhibitor, a criterion for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40).  Therefore, the result is EQUIVOCAL.
+Although the RVVT test is positive for lupus anticoagulant according to the manufacturer's guidelines for interpretation, review of the clinical history indicates [current warfarin therapy/a prolonged prothrombin time] and the results do not definitively demonstrate an inhibitor, a criterion for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40).  Therefore, the result is EQUIVOCAL.
 
 BORDERLINE BEST INTERPRETED AS NEGATIVE
-Although the borderline results of this RVVT test could be considered positive for lupus anticoagulant according to the manufacturer’s guidelines for the interpretation of test results, the RVVT test does not meet criteria for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40) and the results do not definitively demonstrate an inhibitor.  Overall, the best interpretation of these findings is as NEGATIVE for lupus anticoagulant.  
+Although the borderline results of this RVVT test could be considered positive for lupus anticoagulant according to the manufacturer's guidelines for the interpretation of test results, the RVVT test does not meet criteria for lupus anticoagulant according to published international guidelines (J Thromb Haemost 2009; 7: 1737-40) and the results do not definitively demonstrate an inhibitor.  Overall, the best interpretation of these findings is as NEGATIVE for lupus anticoagulant.  
 
 SECOND PARAGRAPH
 [A negative test result in this assay does not exclude the possibility of a lupus anticoagulant.]  Current guidelines suggest testing for lupus anticoagulant with two clot based tests (J Thromb Haemost 2009; 7: 1737-40) and it is noted that the concurrent lupus anticoagulant by HEXA assay is [also positive/negative/equivocal] in this patient.  Lupus anticoagulant testing should be considered positive if one of the two tests gives a positive result. [Given the negative results in both the RVVT and Lupus Anticoagulant by HEXA assays, the findings are negative for Lupus Anticoagulant.]
@@ -34,7 +34,7 @@ FOR EQUIVOCALS AND NEGATIVES
 Testing for lupus anticoagulant in the presence of anticoagulant therapy (including warfarin, direct thrombin inhibitors & direct factor 10a inhibitors, and supratherapeutic heparin) is not recommended due to possible interference with test results.  The presence of factor deficiencies or a factor specific inhibitor may also interfere with this assay.  Clinical correlation is advised.  
 
 FOURTH PARAGRAPH
-[Positive test/Test] results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295–306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
+[Positive test/Test] results must be interpreted in their clinical context if a diagnosis of antiphospholipid syndrome is being considered.  J Thromb Haemost 2006; 4: 295-306 provides consensus guidelines for diagnosis of antiphospholipid syndrome.
 
 
 
