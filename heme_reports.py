@@ -42,8 +42,8 @@ if __name__ == '__main__':
         rvvt.parse_text(rvvt_txt)
         hexa = ht.HEXA()
         hexa.parse_text(hexa_txt)
-        hexa.make_reports(open(argv[4]).read(), 'HEXA', argv[5])
-        rvvt.make_reports(open(argv[3]).read(), 'RVVT', argv[5])
+        super(ht.HEXA, hexa).make_reports(open(argv[4]).read(), 'HEXA', argv[5])
+        super(ht.RVVT, rvvt).make_reports(open(argv[3]).read(), 'RVVT', argv[5])
 
     elif argv[1] == 'interpret_rvvts_hexas':
         hexa_txt, rvvt_txt = read_hexa_rvvt_worksheet(argv[2])

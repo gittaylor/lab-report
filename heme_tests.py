@@ -12,6 +12,8 @@ class Result(float):
 class RVVTresult(Result):
     def __new__(self, result):
         res = result.split(',')
+        if res[0].strip() == 'TNI':
+            return super(RVVTresult, self).__new__(self, 0, flag='error')
         if len(res) == 1:
             return super(RVVTresult, self).__new__(self, res[0])
         if len(res) == 2:
@@ -30,7 +32,7 @@ class HEXAresult(str):
 class Test(object):
     re_date = "(\d\d\/\d\d\/\d\d\d\d)"
     re_time = "([\d\:]+)"
-    re_name = "([\w\-\,]+)"
+    re_name = "([\w\-\,]+[\s\w]{0,2})"
     re_acc = "(\w\d+)"
     re_mrn = "(\d+)"
     re_wo_info1 = "\s+".join([re_acc, re_date, re_time, re_name])
@@ -60,12 +62,13 @@ class Test(object):
             if j.start() - i.start() < 0 or j.start() - i.start() > 200:
                 raise ValueError("error parsing result near position %s" % min(i.start(), j.start()))
             if k.start() - j.start() < 0 or k.start() - j.start() > 400:
-                raise ValueError("error parsing result near position %s" % min(j.start(), k.start()))
-            
+                raise ValueError("error parsing result.\ninfo1 %s: %s\ninfo2 %s: %s\nresult %s: %s\ntext between info2 and result: %s" % (i.start(), i.groups(), j.start(), j.groups(), k.start(), k.groups(), text[j.start():k.start()]))
+            print i.groups()
             acc, accdate, acctime, name = i.groups()
             if len(acctime) == 4:
                 acctime = acctime[:2] + ':' + acctime[2:]
             mrn, bdate = j.groups()
+            print j.groups()
             results[acc] = {'acc': acc,
                             'accdate': datetime.strptime(accdate + ' ' + acctime, '%m/%d/%Y %H:%M'),
                           'name': name,
@@ -119,8 +122,11 @@ class PT(Test):
         patients = {}
         # discard the patient info leading up to the first test
         rslts = text.split("TEST-")[1:]
+
         for rslt in rslts:
             ids = re.findall(self.re_iq_info1, rslt)
+            if len(ids) == 0:
+                import pdb; pdb.set_trace()
             name, mrn = ids.pop(0)
             results = {}
             accs = re.finditer(self.re_iq_info2, rslt)
@@ -136,7 +142,8 @@ class PT(Test):
                     credit = re.search('REQUEST CREDITED', rslt[acc.start():acc.start()+700])
                     if credit is not None:
                         continue
-                    raise ValueError("Accession %s beyond last result" % str(acc.groups()))
+                    continue
+                    # raise ValueError("Accession %s beyond last result for patient %s (%s)" % (str(acc.groups()), name, mrn))
                 
                 print res.start() - acc.start()
                 print acc.start(), res.start(), acc.groups(), res.groups()
@@ -170,14 +177,13 @@ class PT(Test):
             times = self.patients[i].keys()
             times.sort(reverse=True)
             if len(times) > 0:
-                print times
                 latest_pts[i] = self.patients[i][times[0]]
             else:
                 latest_pts[i] = None
         return latest_pts
 
 class HEXA(Test):
-    re_result = "{HEXA\s+(\w+)"
+    re_result = "{HEXA\s+([\;\w]+)"
     rvvt_result = {'POS': 'positive', 'NEG': 'negative', 'EQUIV': 'equivocal', 'BORDERNEG': 'borderline negative'}
     positive = open("templates/HEXA Positive.txt").read()
     negative = open("templates/HEXA Negative.txt").read()
@@ -218,7 +224,7 @@ class HEXA(Test):
             if self.results[acc]['result'].strip() == "POS":
                 template_args['result'] = 'POS'
                 template_args['template'] = self.positive
-            elif self.results[acc]['result'].strip() == "EQHEX":
+            elif self.results[acc]['result'].strip() in ("EQHEX", ";EQUIVOCAL"):
                 template_args['result'] = 'EQUIV'
                 template_args['template'] = self.equivocal
             elif self.results[acc]['result'].strip() == "NEG":
@@ -232,7 +238,7 @@ class HEXA(Test):
 
 class RVVT(Test):
     result_names = ["DVVTS", "DISS", "DVVN", "ISR", "DVVCS", "DVVCR"]
-    re_result = "\s+".join(["{%s([\s\d\.\,\*\w]+) \(RVVTD,\d+\)" % name for name in result_names])
+    re_result = "\s+".join(["{%s([\s\d\.\,\*\w]+) \(RVVTD,\d+\)[\s\d\.\,\*\w\(\)]+" % name for name in result_names])
 
     hexa_result = {'POS': 'positive', 'NEG': 'negative', 'EQUIV': 'equivocal'}
     strong_positive = "; in this sample a false positive is however unlikely given the strength of the positive result."
@@ -256,6 +262,8 @@ class RVVT(Test):
     def parse_result(self, result):
         rdict = {}
         for i in range(len(result)):
+            if result[i][0] == 'TNI':
+                rdict['for reivew'] = True
             rdict[self.result_names[i]] = RVVTresult(result[i])
         return rdict
 
@@ -279,10 +287,12 @@ class RVVT(Test):
             meets_manuf = self.check_thresh(result, self.MANUF_THRESH)
             meets_isth = self.check_thresh(result, self.ISTH_THRESH)
             
+            if 'error' in result:
+                template_args['for review'] = True
             # if the result is borderline, see if the pt was elevated
-            if meets_isth and result['DISS'] < self.DISS_ALT:
-                if result['mrn'] in inr.results:
-                    if inr.results[result['mrn']]['result'] > 1.2:
+            if meets_isth and result['result']['DISS'] < self.DISS_ALT:
+                if result['mrn'] in latest_pts:
+                    if latest_pts[result['mrn']] is not None and latest_pts[result['mrn']]['val'] > 1.2:
                         meets_isth = False
 
             # determine whether pos, equiv, or neg
@@ -334,6 +344,6 @@ class RVVT(Test):
                 args['both_neg'] = ''
             report_text = self.replace(args['template'], args)
             if 'for_review' in args:
-                self.make_report(result['acc'], report_text, 'HEXA', outdir, for_review=True)
+                self.make_report(result['acc'], report_text, 'RVVT', outdir, for_review=True)
             else:
-                self.make_report(result['acc'], report_text, 'HEXA', outdir)
+                self.make_report(result['acc'], report_text, 'RVVT', outdir)
