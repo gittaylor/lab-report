@@ -52,13 +52,13 @@ def pltct_pltids(piece, data, ident):
                 plt['count'] = line[2]
 
 def pltct_unitids(piece, data, ident):
+    unitnums = [i['unit'][1] for i in data[ident]['units']]
     for line in piece.split('\n'):
-        line = line.split()
         if len(line) == 0:
             continue
-        for unit in data[ident]['units']:
-            if unit['unit'][1] == line[0]:
-                unit['unit'] = "%s %s %s" % tuple(line[1:4])
+        unitnum = line[12:18].strip()
+        if unitnum in unitnums:
+            data[ident]['units'][unitnums.index(unitnum)]['unit'] = line[22:38].strip()
 
 def pltct(reports):
     rptheader = """===============================================================================
@@ -128,7 +128,7 @@ def pdtlist(reports):
             lines = section.split('\n')
             for entry in range(len(lines)-2):
                 try:
-                    unit = {'unit': lines[entry][15:30], 
+                    unit = {'unit': lines[entry][15:30].strip(), 
                             'org': lines[entry][44:64], 
                             'comp': lines[entry][70:90].strip(), 
                             'div': lines[entry][92:94], 
@@ -137,7 +137,6 @@ def pdtlist(reports):
                             'expires': lines[entry][124:].strip(),
                             'pltcount': ''
                     }
-
                 except IndexError:
                     continue
                 # check to make sure this is a real unit
@@ -170,6 +169,7 @@ def pdtlist(reports):
                     else:
                         break
                 data[unit['unit'] + unit['comp']] = unit
+
         rptdata.append(data)
     return rptdata
 
@@ -230,7 +230,7 @@ def print_platelet_summary(rptdata, buffer):
             buffer.write('%s\t%s\n\nDate\tUnit\tComponent\t\tType\tLocation\t\tPre\tPost\tCCI\tUnit Count\tComments\n' % ident)
             for unit in report[ident]['units']:
                 try:
-                    buffer.write(outformat % (unit['date'], unit['unit'], unit['comp'], unit['type'], bbank(unit['unit']), unit['pre'], unit.get('post', ''), unit['pltcount'], unit['comments']))
+                    buffer.write(outformat % (unit['date'], unit['unit'], unit['comp'], unit['type'], bbank(unit['unit']), unit.get('pre', ''), unit.get('post', ''), unit['pltcount'], unit['comments']))
                 except:
                     import pdb; pdb.set_trace()
             for pdtreport in rptdata['BLOOD BANK - PRODUCT FILELIST\tFor Hospital P']:
